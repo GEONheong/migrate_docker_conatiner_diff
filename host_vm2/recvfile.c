@@ -48,7 +48,7 @@ int recvfile(int sock)
     system("docker run -d -p 8888:80 --name nx3 nginx");
     system("docker inspect nx3 > info.json");
     diff_path = parsing();
-    sprintf(diff_command, "tar xvf nx2.tar -C %s", diff_path);
+    sprintf(diff_command, "sudo tar xvf nx2.tar -C %s", diff_path);
     system(diff_command);
 
     return 0;
