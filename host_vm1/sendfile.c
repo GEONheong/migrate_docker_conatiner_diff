@@ -23,7 +23,7 @@ int sendfile(int sock)
     char *diff_path;
     char diff_command[1024];
 
-    systme("su -");
+    system("su -");
     system("docker inspect nx > info.json");
     diff_path = parsing();
     sprintf(diff_command, "tar cvf nx2.tar %s", diff_path);
