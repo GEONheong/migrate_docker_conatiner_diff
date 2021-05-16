@@ -28,7 +28,7 @@ int sendfile(int sock)
     sprintf(diff_command, "cd %s", diff_path);
     system(diff_command);
     system("cd ..");
-    system("sudo tar cvf nx2.tar diff");
+    system("sudo tar cvf nx2.tar ./diff");
     system("sudo chmod 777 nx2.tar");
 
     char *line;
