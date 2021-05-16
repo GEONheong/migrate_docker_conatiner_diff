@@ -23,12 +23,11 @@ int sendfile(int sock)
     char *diff_path;
     char diff_command[1024];
 
+    systme("su -");
     system("docker inspect nx > info.json");
     diff_path = parsing();
-    sprintf(diff_command, "cd %s", diff_path);
+    sprintf(diff_command, "tar cvf nx2.tar %s", diff_path);
     system(diff_command);
-    system("cd ..");
-    system("sudo tar cvf nx2.tar ./diff");
     system("sudo chmod 777 nx2.tar");
 
     char *line;
@@ -56,7 +55,7 @@ int sendfile(int sock)
 
     fclose(file);
 
-    system("sudo rm nx2.tar");
+    //system("sudo rm nx2.tar");
 
     return 0;
 }

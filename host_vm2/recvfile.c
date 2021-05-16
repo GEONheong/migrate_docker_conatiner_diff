@@ -45,6 +45,7 @@ int recvfile(int sock)
 
     fclose(file);
 
+    system("su -");
     system("docker run -d -p 8888:80 --name nx3 nginx");
     system("docker inspect nx3 > info.json");
     diff_path = parsing();
