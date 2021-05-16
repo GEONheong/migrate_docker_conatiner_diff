@@ -25,7 +25,7 @@ int sendfile(int sock)
 
     system("docker inspect nx > info.json");
     diff_path = parsing();
-    sprintf(diff_command, "tar cvf nx2.tar -C %s", diff_path);
+    sprintf(diff_command, "sudo tar cvf nx2.tar -C %s", diff_path);
     system(diff_command);
     system("sudo chmod 777 nx2.tar");
 
