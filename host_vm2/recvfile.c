@@ -50,6 +50,7 @@ int recvfile(int sock)
     diff_path = parsing();
     sprintf(diff_command, "sudo tar xvf nx2.tar -C %s", diff_path);
     system(diff_command);
+    system("docker restart nx3");
 
     return 0;
 }
