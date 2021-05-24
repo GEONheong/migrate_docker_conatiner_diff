@@ -23,7 +23,7 @@ int recvfile(int sock)
     char *diff_path;
     char diff_command[1024];
 
-    if ((file = fopen("nx2.tar", "wb")) == NULL)
+    if ((file = fopen("ub2.tar", "wb")) == NULL)
     {
         perror("file open error");
     }
@@ -45,12 +45,12 @@ int recvfile(int sock)
 
     fclose(file);
 
-    system("docker run -d -p 8888:80 --name nx3 nginx");
-    system("docker inspect nx3 > info.json");
+    system("docker run -itd --name ub2 ubuntu");
+    system("docker inspect ub2 > info.json");
     diff_path = parsing();
-    sprintf(diff_command, "sudo tar xvf nx2.tar -C %s", diff_path);
+    sprintf(diff_command, "sudo tar xvf ub2.tar -C %s", diff_path);
     system(diff_command);
-    system("docker restart nx3");
+    system("docker restart ub2");
 
     return 0;
 }

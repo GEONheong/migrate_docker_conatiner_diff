@@ -23,15 +23,15 @@ int sendfile(int sock)
     char *diff_path;
     char diff_command[1024];
 
-    system("docker inspect nx > info.json");
+    system("docker inspect ub > info.json");
     diff_path = parsing();
-    sprintf(diff_command, "sudo tar cvf nx2.tar -C %s .", diff_path);
+    sprintf(diff_command, "sudo tar cvf ub2.tar -C %s .", diff_path);
     system(diff_command);
-    system("sudo chmod 777 nx2.tar");
+    system("sudo chmod 777 ub2.tar");
 
     char *line;
 
-    if ((file = fopen("nx2.tar", "rb")) == NULL)
+    if ((file = fopen("ub2.tar", "rb")) == NULL)
     {
         perror("file open error");
     }
