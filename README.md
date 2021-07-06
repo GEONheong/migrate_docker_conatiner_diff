@@ -12,6 +12,8 @@
 해당 컨테이너의 베이스 이미지는 무조건 ubuntu 이고 이름은 ub 로 생성해주어야 합니다
 ![image](https://user-images.githubusercontent.com/83600412/124595143-9ec5ea80-de9b-11eb-97c6-00a421c002c7.png)
 
+변경 사항이 있으시다면 make 파일을 통해 컴파일 하시면 됩니다
+
 # 실행 절차
 
 1. 가상머신 1,2번에 각각 migrate_docker_container_diff 을 clone 합니다
