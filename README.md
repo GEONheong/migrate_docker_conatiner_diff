@@ -1,5 +1,18 @@
 # Migration container (diff version)
 
+# 참고
+
+1번 가상머신 host_vm1/vm1.c 파일의 "VMTWOIP" 를 각자의 네트워크의 상황에따라 2번 가상머신의 IP를 알고 입력 해놔야 합니다
+![image](https://user-images.githubusercontent.com/83600412/124592440-7092db80-de98-11eb-86c2-ea02df298013.png)
+
+반대로 2번 가상머신 host_vm2/vm2.c 파일의 "SERVERIP"를 각자의 네트워크 상황에따라 1번 가상머신의 IP를 알고 입력 해놔야 합니다 
+![image](https://user-images.githubusercontent.com/83600412/124594584-ef891380-de9a-11eb-8372-e396de82c0ba.png)
+
+그리고 아직은 직접 코드로 컨테이너의 베이스 이미지와 이름을 지정해주기 때문에 해당 컨테이너의 베이스 이미지는 무조건 ubuntu 이고 이름은 ub 로 생성해주어야 합니다
+![image](https://user-images.githubusercontent.com/83600412/124595143-9ec5ea80-de9b-11eb-97c6-00a421c002c7.png)
+
+# 실행 절차
+
 1. 가상머신 1,2번에 각각 migrate_docker_container_diff 을 clone 합니다
 ![image](https://user-images.githubusercontent.com/83600412/124562875-7da0d200-de7a-11eb-9878-46d4368e3dcf.png)
 
@@ -44,12 +57,6 @@
 12. 2번 가상머신에 제대로 옮겨진 것을 확인 할수 있습니다
 ![image](https://user-images.githubusercontent.com/83600412/124592090-07ab6380-de98-11eb-8b46-8beb21f07cf2.png)
 ![image](https://user-images.githubusercontent.com/83600412/124592189-26a9f580-de98-11eb-841f-434e417bb16e.png)
-
-# 참고
-
-![image](https://user-images.githubusercontent.com/83600412/124592440-7092db80-de98-11eb-86c2-ea02df298013.png)
-
-
 
 
 
