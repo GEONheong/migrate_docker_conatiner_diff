@@ -10,7 +10,7 @@
 #include <errno.h>
 
 #define SERVERIP "127.0.0.1"
-#define VMTWOIP "192.168.0.9"
+#define VMTWOIP "192.168.0.157"
 #define RECV_MSG "migrate crazy_orange 1 2"
 
 extern int sendfile(int sock);

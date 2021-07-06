@@ -1,8 +1,8 @@
 #!/bin/sh
 
-echo -e "Input controller port : c"
+echo "Input controller port : "
 read port1
-echo -e "Input host port : c"
+echo "Input host port : "
 read port2
 echo -n '876700' | sudo -S ./host_controller/controller $port1 &
 sleep 1
