@@ -8,7 +8,7 @@
 반대로 2번 가상머신 host_vm2/vm2.c 파일의 "SERVERIP"를 각자의 네트워크 상황에따라 1번 가상머신의 IP를 알고 입력 해놔야 합니다 
 ![image](https://user-images.githubusercontent.com/83600412/124594584-ef891380-de9a-11eb-8372-e396de82c0ba.png)
 
-그리고 아직은 직접 코드로 컨테이너의 베이스 이미지와 이름을 지정해주기 때문에 
+그리고 아직은 직접 코드로 컨테이너의 베이스 이미지와 이름을 지정해주기 때문에<br>
 해당 컨테이너의 베이스 이미지는 무조건 ubuntu 이고 이름은 ub 로 생성해주어야 합니다
 ![image](https://user-images.githubusercontent.com/83600412/124595143-9ec5ea80-de9b-11eb-97c6-00a421c002c7.png)
 
