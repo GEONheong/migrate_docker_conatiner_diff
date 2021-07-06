@@ -25,6 +25,7 @@
 
 7. 1번 가상머신 /host_user로 들어 와있는 곳에서 ./user 9999(controller 포트) 실행 시켜주고 아래 와 같이 명령어를 입력해줍니다 
 ![image](https://user-images.githubusercontent.com/83600412/124591049-cd8d9200-de96-11eb-89f6-502a8fff9709.png)
+
 1번 가상머신에서 2-connect 가 된것을 볼수 있습니다
 ![image](https://user-images.githubusercontent.com/83600412/124591005-bea6df80-de96-11eb-9487-b1b7d8ac25bf.png)
 
