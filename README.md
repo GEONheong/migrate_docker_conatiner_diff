@@ -19,5 +19,37 @@
 
 6. 2번 가상머신에서 ./second.sh 를 실행 시킨뒤 위와 같이 포트 번호를 입력 해줍니다 (백드라운드로 vm2 가 실행 중인 상태)
 ![image](https://user-images.githubusercontent.com/83600412/124567663-2ea96b80-de7f-11eb-9fe6-ceb8ea37436a.png)
+1번 가상머신에서 보면 1-connect 가 된 것을 볼수 있습니다
+![image](https://user-images.githubusercontent.com/83600412/124568407-d757cb00-de7f-11eb-9556-cca740cc3181.png)
 
-7. 1번 가상머신 /user_host로 들어 와있는 곳에서 ./user 9999(controller 포트) 실행 시켜주고 아래 와 같이 명령어를 입력해줍니다 
+
+7. 1번 가상머신 /host_user로 들어 와있는 곳에서 ./user 9999(controller 포트) 실행 시켜주고 아래 와 같이 명령어를 입력해줍니다 
+![image](https://user-images.githubusercontent.com/83600412/124591049-cd8d9200-de96-11eb-89f6-502a8fff9709.png)
+1번 가상머신에서 2-connect 가 된것을 볼수 있습니다
+![image](https://user-images.githubusercontent.com/83600412/124591005-bea6df80-de96-11eb-9487-b1b7d8ac25bf.png)
+
+8. 1번 가상머신 /host_user에서 아래와 같은 명령어를 입력 해줍니다
+![image](https://user-images.githubusercontent.com/83600412/124591169-f31a9b80-de96-11eb-8cc3-3e10eca93fa4.png)
+
+9. 명령어를 입력하면 /host_user쪽 에선 완료 매세지와 전송시 걸린 시간을 보여 줍니다 
+![image](https://user-images.githubusercontent.com/83600412/124591626-7a680f00-de97-11eb-8064-33ba3a5c2a8a.png)
+
+10. 전송시 1번 가상머신에서는 이와 같이 나옵니다
+![image](https://user-images.githubusercontent.com/83600412/124591916-d6329800-de97-11eb-849a-6dc640208025.png)
+
+11. 전송시 2번 가상머신에서는 이와 같이 나옵니다
+![image](https://user-images.githubusercontent.com/83600412/124591989-ecd8ef00-de97-11eb-9acd-ad1c25cdde70.png)
+
+12. 2번 가상머신에 제대로 옮겨진 것을 확인 할수 있습니다
+![image](https://user-images.githubusercontent.com/83600412/124592090-07ab6380-de98-11eb-8b46-8beb21f07cf2.png)
+![image](https://user-images.githubusercontent.com/83600412/124592189-26a9f580-de98-11eb-841f-434e417bb16e.png)
+
+# 참고
+<hr>
+![image](https://user-images.githubusercontent.com/83600412/124592440-7092db80-de98-11eb-86c2-ea02df298013.png)
+
+
+
+
+
+
