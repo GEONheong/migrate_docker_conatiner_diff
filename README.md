@@ -3,7 +3,6 @@
 ## 사전 준비
 
 - 1번 가상머신 에서 host_vm1/vm1.c 파일의 "VMTWOIP"에 2번 가상머신의 IP를 입력 합니다
-<br>
 ![image](https://user-images.githubusercontent.com/83600412/124592440-7092db80-de98-11eb-86c2-ea02df298013.png)
 
 - 반대로 2번 가상머신 host_vm2/vm2.c 파일의 "SERVERIP"에 1번 가상머신의 IP를 입력 합니다
