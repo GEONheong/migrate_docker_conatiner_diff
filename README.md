@@ -1,21 +1,21 @@
 # Migration container (diff version)
 
-# 참고
+## 사전 준비
 
-1번 가상머신 host_vm1/vm1.c 파일의 "VMTWOIP" 를 각자의 네트워크의 상황에따라 2번 가상머신의 IP를 알고 입력 해놔야 합니다
+- 1번 가상머신 에서 host_vm1/vm1.c 파일의 "VMTWOIP"에 2번 가상머신의 IP를 입력 합니다
+<br>
 ![image](https://user-images.githubusercontent.com/83600412/124592440-7092db80-de98-11eb-86c2-ea02df298013.png)
 
-반대로 2번 가상머신 host_vm2/vm2.c 파일의 "SERVERIP"를 각자의 네트워크 상황에따라 1번 가상머신의 IP를 알고 입력 해놔야 합니다 
+- 반대로 2번 가상머신 host_vm2/vm2.c 파일의 "SERVERIP"에 1번 가상머신의 IP를 입력 합니다
 ![image](https://user-images.githubusercontent.com/83600412/124594584-ef891380-de9a-11eb-8372-e396de82c0ba.png)
 
-그리고 아직은 직접 코드로 컨테이너의 베이스 이미지와 이름을 지정해주기 때문에<br>
-해당 컨테이너의 베이스 이미지는 무조건 ubuntu 이고 이름은 ub 로 생성해주어야 합니다
+- 컨테이너의 베이스 이미지는 무조건 ubuntu 이고 이름은 ub 로 생성해주어야 합니다
 ![image](https://user-images.githubusercontent.com/83600412/124595143-9ec5ea80-de9b-11eb-97c6-00a421c002c7.png)
 
-변경 사항이 있으시다면 make 파일을 통해 컴파일 하시면 됩니다
+- 변경 사항이 있으시다면 make 파일을 통해 컴파일 하시면 됩니다
 
 # 실행 절차
-
+> VMware, VirtualBox 등 호스트 가상화 도구를 사용하여 가상머신 2대를 켜줍니다
 1. 가상머신 1,2번에 각각 migrate_docker_container_diff 을 clone 합니다
 ![image](https://user-images.githubusercontent.com/83600412/124562875-7da0d200-de7a-11eb-9878-46d4368e3dcf.png)
 
@@ -33,9 +33,9 @@
 5. 1번 가상머신에서 ./start.sh 를 실행 시킨뒤 controller 와 연결할 포트(9999), 2번 가상 머신과 연결할 포트(9998)을 입력 해줍니다 (백그라운드로 controller 와 vm1이 실행중인 상태)  
 ![image](https://user-images.githubusercontent.com/83600412/124567070-990ddc00-de7e-11eb-9fb4-3df6c6cb9c81.png)
 
-6. 2번 가상머신에서 ./second.sh 를 실행 시킨뒤 위와 같이 포트 번호를 입력 해줍니다 (백드라운드로 vm2 가 실행 중인 상태)
+6. 변경2번 가상머신에서 ./second.sh 를 실행 시킨뒤 위와 같이 포트 번호를 입력 해줍니다 (백드라운드로 vm2 가 실행 중인 상태)
 ![image](https://user-images.githubusercontent.com/83600412/124567663-2ea96b80-de7f-11eb-9fe6-ceb8ea37436a.png)
-1번 가상머신에서 보면 1-connect 가 된 것을 볼수 있습니다
+반대로1번 가상머신에서 보면 1-connect 가 된 것을 볼수 있습니다
 ![image](https://user-images.githubusercontent.com/83600412/124568407-d757cb00-de7f-11eb-9556-cca740cc3181.png)
 
 
@@ -61,5 +61,10 @@
 ![image](https://user-images.githubusercontent.com/83600412/124592189-26a9f580-de98-11eb-841f-434e417bb16e.png)
 
 
+# 컨테이너와 레이어
+
+[구조와 원리](./containerStrcture.md)
+
+[직접 확인하기](./containerStrcture2.md)
 
 
